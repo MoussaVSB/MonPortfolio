@@ -335,6 +335,170 @@ nav {
 .about-text strong {
     color: var(--neon-blue);
 }
+/* --- Projet Professionnel --- */
+.career-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.career-vision,
+.career-path,
+.career-goals,
+.career-motivation {
+    margin-bottom: 4rem;
+}
+
+.career-vision p,
+.career-motivation p {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.career-vision strong,
+.career-motivation strong {
+    color: var(--neon-blue);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 3rem;
+    margin-top: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--neon-blue), var(--neon-green));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -2.85rem;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--neon-blue);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+.timeline-content {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 3px solid var(--neon-blue);
+    transition: all 0.3s ease;
+}
+
+:root[data-theme="light"] .timeline-content {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-content:hover {
+    border-color: var(--neon-green);
+    box-shadow: 0 5px 20px rgba(0, 242, 255, 0.15);
+    transform: translateX(5px);
+}
+
+.timeline-content h4 {
+    color: var(--neon-blue);
+    font-family: var(--font-title);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content strong {
+    color: var(--neon-green);
+}
+
+/* Goals Grid */
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.goal-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+:root[data-theme="light"] .goal-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.goal-card:hover {
+    border-color: var(--neon-green);
+    box-shadow: 0 5px 20px rgba(0, 255, 159, 0.2);
+    transform: translateY(-5px);
+}
+
+.goal-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.goal-card h4 {
+    color: var(--neon-green);
+    font-family: var(--font-title);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.goal-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.goal-card li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.goal-card li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--neon-blue);
+    font-weight: bold;
+}
+
+/* Responsive pour la timeline */
+@media (max-width: 900px) {
+    .timeline {
+        padding-left: 2rem;
+    }
+    
+    .timeline-dot {
+        left: -1.85rem;
+    }
+    
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* --- Compétences --- */
 .skills-grid {
